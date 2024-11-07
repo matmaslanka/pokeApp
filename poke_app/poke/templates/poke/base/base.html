@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock%}</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'poke/images/pokemon-logo.svg'%}">
+    <link rel="stylesheet" href="{% static 'poke/styles/base.css' %}">
+    {% block css_files %} {% endblock %}
+</head>
+
+<body>
+<header>
+    <a href="{% url 'home' %}"><img src="{% static 'poke/images/pokemon-logo.svg' %}" alt="Logo"></a>
+    <h1> Pokémon app!</h1>
+    <nav>
+        <ul class="nav-bar-list">
+            <li class="nav-bar"><a href="{% url 'home' %}">Home</a></li>
+            <li class="nav-bar"><a href="{% url 'pokedex' %}">List of Pokémon</a></li>
+            <li class="nav-bar"><a href="{% url 'home' %}">Login</a></li>
+        </ul>
+    </nav>
+</header>
+</body>
+<body>
+{% block content %} {% endblock %}
+</body>
+</html>

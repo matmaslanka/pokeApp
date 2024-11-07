@@ -1,0 +1,26 @@
+{% extends "poke/base/base.html" %}
+{% load static %}
+
+{% block title %} Pokedex {% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'poke/styles/pokedex.css' %}">{% endblock %}
+
+{% block content %}
+<section class="pokedex-section">
+    <ul class="pokedex-bar-list">
+        {% for pokemon in pokemons %}
+        <li class="pokedex-bar" data-pokemon="{{pokemon.name}}">
+            <p>{{pokemon.name}}</p>
+            <img class="pokemon-image" src="{{pokemon.sprite_url}}" alt="{{pokemon.name}} image"/>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="pokemon-info">
+        <h1>Pokedex</h1>
+        <p id="pokemon-name">Wybierz</p>
+        <img id="pokemon-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Pokemon image"/>
+    </div>
+</section>
+<script src="{% static 'poke/scripts/pokemonInfo.js' %}" defer></script>
+{% endblock %}

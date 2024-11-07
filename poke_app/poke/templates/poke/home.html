@@ -1,0 +1,13 @@
+{% extends "poke/base/base.html" %}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'poke/styles/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<div id="pokemons-of-the-day">
+    <h1>Welcome in my pokeapp!</h1>
+</div>
+{% endblock %}
