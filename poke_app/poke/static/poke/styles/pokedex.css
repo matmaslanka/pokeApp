@@ -22,8 +22,8 @@
       justify-content: space-between; /* Ustawia elementy na skrajnych końcach */
       align-items: center;
 
-      width: 12rem;
-      height: 4rem;
+      width: 15rem;
+      height: 3rem;
       padding: 0 1rem;
       margin: 5px 0;
 
@@ -38,7 +38,12 @@
 }
 
 .pokemon-image{
-      height: 4rem;
+      height: 3rem;
+      margin: right;
+}
+
+#pokemon-image{
+      height: 15rem;
       margin: right;
 }
 
@@ -54,4 +59,54 @@
 .pokemon-info p,
 h1{
       margin: 0px;
+}
+#pokemon-types {
+      display: flex;
+      padding: 0;
+      list-style: none;}
+
+#pokemon-types li{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #e0e0e0;
+      width: 8rem;
+      height: 2rem;
+      margin: 0 5px;
+      border-radius: 5px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+      text-align: center;
+
+}
+
+#pokemon-type-img-list{
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      list-style: none;
+}
+
+#pokemon-type-img-list li {
+      margin: 0 5px 5px;
+      height: 32px;
+      border-radius: 5px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+#pokemon-weaknesses-img-list{
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      list-style: none;
+}
+
+#pokemon-weaknesses-img-list li {
+      margin: 0 5px 5px;
+      height: 32px;
+      border-radius: 5px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.stats {
+    display:flex;
 }
